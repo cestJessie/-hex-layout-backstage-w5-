@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Answer</title>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+</head>
+
+<body class="d-flex">
+  <%- include('./layout/sidebar',{page:"admin"}); -%>
+  <%- include('./layout/admin-modals'); -%>
+    <main class="container-lg p-7 d-flex flex-column">
+      <%- include('./layout/admin-header'); -%>
+
+        <div class="d-flex flex-column justify-content-between flex-grow-1">
+          <!-- 表單 -->
+          <table class="admin__list table table-hover align-middle">
+            <thead>
+              <tr>
+                <th scope="col" class=" align-middle">ID
+                  <span class="material-icons text-success  align-middle fs-6">
+                    arrow_downward
+                  </span>
+                </th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Verified</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="py-5 fw-normal">#1</th>
+                <td>Emir Wicks</td>
+                <td>emir.wicks@mail.com</td>
+                <td>Yes</td>
+                <td class="table-actions text-end">
+                  <span class="material-icons me-6 align-middle d-inline text-dark link-success" data-bs-toggle="modal" data-bs-target="#viewAdmin">visibility</span>
+                  <span class="material-icons align-middle d-inline text-dark link-success" data-bs-toggle="modal" data-bs-target="#editAdmin">edit</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="py-5 fw-normal">#2</th>
+                <td>Zaina Goldsmith</td>
+                <td>zaina.goldsmith@mail.com</td>
+                <td>Yes</td>
+                <td class="table-actions text-end">
+                  <span class="material-icons me-6 align-middle d-inline text-dark link-success">visibility</span>
+                  <span class="material-icons align-middle d-inline text-dark link-success">edit</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="py-5 fw-normal">#3</th>
+                <td>Mahima Lopez</td>
+                <td>mahima.lopez@mail.com</td>
+                <td>Yes</td>
+                <td class="table-actions text-end">
+                  <span class="material-icons me-6 align-middle d-inline text-dark link-success">visibility</span>
+                  <span class="material-icons align-middle d-inline text-dark link-success">edit</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="py-5 fw-normal">#4</th>
+                <td>Pharrell Murray</td>
+                <td>pharrell.murray@mail.com</td>
+                <td>Yes</td>
+                <td class="table-actions text-end">
+                  <span class="material-icons me-6 align-middle d-inline text-dark link-success">visibility</span>
+                  <span class="material-icons align-middle d-inline text-dark link-success">edit</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="py-5 fw-normal">#5</th>
+                <td>Annika Mcbride</td>
+                <td>annika.mcbride@mail.com</td>
+                <td>Yes</td>
+                <td class="table-actions text-end">
+                  <span class="material-icons me-6 align-middle d-inline text-dark link-success">visibility</span>
+                  <span class="material-icons align-middle d-inline text-dark link-success">edit</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="py-5 fw-normal">#6</th>
+                <td>Fatimah Clark</td>
+                <td>fatimah.clark@mail.com</td>
+                <td>Yes</td>
+                <td class="table-actions text-end">
+                  <span class="material-icons me-6 align-middle d-inline text-dark link-success">visibility</span>
+                  <span class="material-icons align-middle d-inline text-dark link-success">edit</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="py-5 fw-normal">#7</th>
+                <td>Klaudia Rhodes</td>
+                <td>klaudia.rhodes@mail.com</td>
+                <td>Yes</td>
+                <td class="table-actions text-end">
+                  <span class="material-icons me-6 align-middle d-inline text-dark link-success">visibility</span>
+                  <span class="material-icons align-middle d-inline text-dark link-success">edit</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="py-5 fw-normal">#8</th>
+                <td>Tillie Lucero</td>
+                <td>tillie.lucero@mail.com</td>
+                <td>Yes</td>
+                <td class="table-actions text-end">
+                  <span class="material-icons me-6 align-middle d-inline text-dark link-success">visibility</span>
+                  <span class="material-icons align-middle d-inline text-dark link-success">edit</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="py-5 fw-normal">#9</th>
+                <td>Sabrina Stephenson</td>
+                <td>sabrina.stephenson@mail.com</td>
+                <td>Yes</td>
+                <td class="table-actions text-end">
+                  <span class="material-icons me-6 align-middle d-inline text-dark link-success">visibility</span>
+                  <span class="material-icons align-middle d-inline text-dark link-success">edit</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="py-5 fw-normal">#10</th>
+                <td>Annie Smith</td>
+                <td>annie.smith@mail.com</td>
+                <td>Yes</td>
+                <td class="table-actions text-end">
+                  <span class="material-icons me-6 align-middle d-inline text-dark link-success">visibility</span>
+                  <span class="material-icons align-middle d-inline text-dark link-success">edit</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- 頁碼 -->
+          <nav aria-label="Page navigation example" class="ms-auto">
+            <ul class="pagination mb-0 justify-content-center ">
+              <li class="page-item">
+                <a class="page-link text-success " href="#" aria-label="Previous">
+                  <span class="material-icons align-middle fs-6 fw-bold">
+                    chevron_left
+                    </span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link text-success" href="#" aria-label="Next">
+                  <span class="material-icons align-middle fs-6 fw-bold">
+                    chevron_right
+                    </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"></script>
+    <script type="module" src="../main.js"></script>
+</body>
+
+</html>

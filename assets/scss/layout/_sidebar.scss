@@ -1,0 +1,54 @@
+.sidebar {
+  max-width: 296px;
+
+  .website__logo a {
+    display: block;
+    background-image: url(../images/logo-ANSWER.svg);
+    width: 151px;
+    height: 40px;
+    background-size: cover;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .list-group {
+    --bs-list-group-border-radius: 0%;
+
+    .list-item a {
+      &:hover {
+        color: $success;
+      }
+  
+      &:hover::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 4px;
+        height: 32px;
+        border-left: 4px solid $success;
+      }
+  
+      &.active {
+        border-left: 4px solid $success;
+  
+        &.active::before {
+          position: absolute;
+          content: "";
+          height: 32px;
+          left: -32px;
+          border-left: 4px solid $success;
+          .list-group__icon {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.user__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

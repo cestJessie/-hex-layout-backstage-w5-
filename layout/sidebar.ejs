@@ -1,0 +1,67 @@
+<aside class="sidebar bg-light d-flex flex-column justify-content-between vh-100 py-7 px-7">
+  <div>
+    <h1 class="mb-7 website__logo">
+      <a href="#">ANSWER</a>
+    </h1>
+    <nav class="nav">
+      <ul class="list-group list-unstyled fw-bold ">
+        <li class="list-item mb-6" id="nav__dashboard" aria-current="true">
+          <a class="d-flex"  href="#">
+            <span class="list-group__icon material-icons me-5 align-middle">
+              assessment
+            </span>
+            <span class="list-group__title">Dashboard</span>
+          </a>
+        </li>
+        <li class="list-item mb-6" id="nav__question" aria-disabled="true">
+          <a class="d-flex" href="#">
+            <span class="list-group__icon material-icons me-5 align-middle">
+              question_answer
+            </span>
+            <span class="list-group__title">Question</span>
+          </a>
+        </li>
+        <li class="list-item mb-6" id="nav__assignment" aria-disabled="true">
+          <a class="d-flex" href="#">
+            <span class="list-group__icon material-icons me-5 align-middle">
+              assignment
+            </span>
+            <span class="list-group__title">Assignment</span>
+          </a>
+        </li>
+        <li class="list-item mb-6 " id="nav__course" aria-disabled="true">
+          <a class="d-flex" href="#">
+            <span class="list-group__icon material-icons me-5 align-middle">
+              video_library
+            </span>
+            <span class="list-group__title">Course</span>
+          </a>
+        </li>
+        <li class="list-item mb-6" id="nav__admin" aria-disabled="true">
+          <a class="d-flex <%= page === " admin" ? "active" : "" %>"
+            href="admin.html">
+            <span class="list-group__icon material-icons me-5 align-middle">
+              people
+            </span>
+            <span class="list-group__title">Admin</span>
+          </a>
+        </li>
+        <li class="list-item" id="nav__setting" aria-disabled="true">
+          <a class="d-flex" href="#">
+            <span class="list-group__icon material-icons me-5 align-middle">
+              settings
+            </span>
+            <span class="list-group__title">Settings</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="d-flex align-items-center mt-auto pe-9">
+    <img src="../assets/images/andychen.jpeg" alt="user-photo" class="user__avatar me-5">
+    <div>
+      <p class="fw-bold mb-1">Andy Chen</p>
+      <span class="fs-sm text-secondary mb-0">andy0401@mail.com</span>
+    </div>
+  </div>
+</aside>

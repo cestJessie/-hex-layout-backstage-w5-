@@ -1,0 +1,27 @@
+// BS 放在最前面
+@import "../../node_modules/bootstrap/scss/functions";
+
+// Include any default variable overrides here
+@import './utils/variables';
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+
+// BS layout & components 建議保留
+@import "../../node_modules/bootstrap/scss/reboot";
+
+// Optionally include any other parts as needed
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Add additional custom code here
+@import './base/base';
+@import './base/fontStyle';
+@import './utils/utilities';
+@import './layout/sidebar.scss';
+@import './layout/admin-header.scss';
+@import './layout/admin-modals.scss';
+@import './pages/admin.scss';
+

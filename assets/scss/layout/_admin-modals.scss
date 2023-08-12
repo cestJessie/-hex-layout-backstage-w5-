@@ -1,0 +1,26 @@
+// view Admin 
+.view-admin {
+  .Emir-photo {
+    max-width: 141px;
+    height: 141px;
+  }
+
+  .expand-more-icon {
+    cursor: pointer;
+  }
+
+  .accordion-button {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+// edit admin
+.form-check-input{
+  cursor: pointer;
+  border: 2px solid $dark;
+  &.form-check-input:checked ~.form-check-label{
+    border-color:transparent;
+  }
+}
+

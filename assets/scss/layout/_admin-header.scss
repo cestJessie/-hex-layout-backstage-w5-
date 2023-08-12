@@ -1,0 +1,17 @@
+.header__left{
+  button {
+    background-color: transparent;
+    border: none;
+  
+    &:hover {
+      color: $success;
+    }
+  }
+  }
+
+.header__right {
+  .material-icons {
+    cursor: pointer;
+  }
+}
+

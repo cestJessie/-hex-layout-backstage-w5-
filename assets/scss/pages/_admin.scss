@@ -1,0 +1,39 @@
+// *{
+//   outline: 1px solid red;
+// }
+
+thead {
+  border-color: $gray-900;
+}
+
+.table-actions {
+  .material-icons{
+    cursor: pointer;
+    }
+  }
+
+
+.pagination {
+  --bs-pagination-border-radius: 0%;
+
+  .page-link {
+    color: $gray-900;
+    border: 1px solid $success;
+
+    &:hover {
+      color: white;
+      background: $success;
+      border: 1px solid $success;
+    }
+
+    .material-icons {
+      color: $success;
+
+      &:hover {
+        color: white;
+        background: $success;
+      }
+    }
+  }
+}
+
