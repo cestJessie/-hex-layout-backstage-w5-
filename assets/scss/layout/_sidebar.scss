@@ -19,7 +19,7 @@
       &:hover {
         color: $success;
       }
-  
+
       &:hover::before {
         content: "";
         position: absolute;
@@ -28,16 +28,17 @@
         height: 32px;
         border-left: 4px solid $success;
       }
-  
+
       &.active {
         border-left: 4px solid $success;
-  
+
         &.active::before {
           position: absolute;
           content: "";
           height: 32px;
           left: -32px;
           border-left: 4px solid $success;
+
           .list-group__icon {
             display: inline-block;
           }

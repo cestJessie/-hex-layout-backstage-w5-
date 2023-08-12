@@ -1,17 +1,12 @@
-// *{
-//   outline: 1px solid red;
-// }
-
 thead {
   border-color: $gray-900;
 }
 
 .table-actions {
-  .material-icons{
+  .material-icons {
     cursor: pointer;
-    }
   }
-
+}
 
 .pagination {
   --bs-pagination-border-radius: 0%;
@@ -36,4 +31,3 @@ thead {
     }
   }
 }
-
