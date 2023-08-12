@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Answer</title>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+  <script type="module" crossorigin src="/-hex-layout-backstage-w5-/assets/admin-3895f5b3.js"></script>
+  <link rel="stylesheet" href="/-hex-layout-backstage-w5-/assets/admin-b60ed324.css">
+</head>
+
+<body class="d-flex">
+  <aside class="sidebar bg-light d-flex flex-column justify-content-between vh-100 py-7 px-7">
+  <div>
+    <h1 class="mb-7 website__logo">
+      <a href="#">ANSWER</a>
+    </h1>
+    <nav class="nav">
+      <ul class="list-group list-unstyled fw-bold ">
+        <li class="list-item mb-6" id="nav__dashboard" aria-current="true">
+          <a class="d-flex"  href="#">
+            <span class="list-group__icon material-icons me-5 align-middle">
+              assessment
+            </span>
+            <span class="list-group__title">Dashboard</span>
+          </a>
+        </li>
+        <li class="list-item mb-6" id="nav__question" aria-disabled="true">
+          <a class="d-flex" href="#">
+            <span class="list-group__icon material-icons me-5 align-middle">
+              question_answer
+            </span>
+            <span class="list-group__title">Question</span>
+          </a>
+        </li>
+        <li class="list-item mb-6" id="nav__assignment" aria-disabled="true">
+          <a class="d-flex" href="#">
+            <span class="list-group__icon material-icons me-5 align-middle">
+              assignment
+            </span>
+            <span class="list-group__title">Assignment</span>
+          </a>
+        </li>
+        <li class="list-item mb-6 " id="nav__course" aria-disabled="true">
+          <a class="d-flex" href="#">
+            <span class="list-group__icon material-icons me-5 align-middle">
+              video_library
+            </span>
+            <span class="list-group__title">Course</span>
+          </a>
+        </li>
+        <li class="list-item mb-6" id="nav__admin" aria-disabled="true">
+          <a class="d-flex "
+            href="admin.html">
+            <span class="list-group__icon material-icons me-5 align-middle">
+              people
+            </span>
+            <span class="list-group__title">Admin</span>
+          </a>
+        </li>
+        <li class="list-item" id="nav__setting" aria-disabled="true">
+          <a class="d-flex" href="#">
+            <span class="list-group__icon material-icons me-5 align-middle">
+              settings
+            </span>
+            <span class="list-group__title">Settings</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="d-flex align-items-center mt-auto pe-9">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCMRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAACigAwAEAAAAAQAAACgAAAAA/+0AOFBob3Rvc2hvcCAzLjAAOEJJTQQEAAAAAAAAOEJJTQQlAAAAAAAQ1B2M2Y8AsgTpgAmY7PhCfv/CABEIACgAKAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAADAgQBBQAGBwgJCgv/xADDEAABAwMCBAMEBgQHBgQIBnMBAgADEQQSIQUxEyIQBkFRMhRhcSMHgSCRQhWhUjOxJGIwFsFy0UOSNIII4VNAJWMXNfCTc6JQRLKD8SZUNmSUdMJg0oSjGHDiJ0U3ZbNVdaSVw4Xy00Z2gONHVma0CQoZGigpKjg5OkhJSldYWVpnaGlqd3h5eoaHiImKkJaXmJmaoKWmp6ipqrC1tre4ubrAxMXGx8jJytDU1dbX2Nna4OTl5ufo6erz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAECAAMEBQYHCAkKC//EAMMRAAICAQMDAwIDBQIFAgQEhwEAAhEDEBIhBCAxQRMFMCIyURRABjMjYUIVcVI0gVAkkaFDsRYHYjVT8NElYMFE4XLxF4JjNnAmRVSSJ6LSCAkKGBkaKCkqNzg5OkZHSElKVVZXWFlaZGVmZ2hpanN0dXZ3eHl6gIOEhYaHiImKkJOUlZaXmJmaoKOkpaanqKmqsLKztLW2t7i5usDCw8TFxsfIycrQ09TV1tfY2drg4uPk5ebn6Onq8vP09fb3+Pn6/9sAQwACAwMDBAMEBQUEBgYGBgYICAcHCAgNCQoJCgkNEwwODAwODBMRFBEPERQRHhgVFRgeIx0cHSMqJSUqNTI1RUVc/9sAQwECAwMDBAMEBQUEBgYGBgYICAcHCAgNCQoJCgkNEwwODAwODBMRFBEPERQRHhgVFRgeIx0cHSMqJSUqNTI1RUVc/9oADAMBAAIRAxEAAAH5D026PUb6B865+jgtt1ck9dzJM9PpbxrjZ5+pnBBdnCYzc1EGoVJCYJv/2gAIAQEAAQUC+9b28k0ljtdsmHcoIEL7bbII7pG4C2e6XfOk707H7hLL/9oACAEDEQE/AREk0GXTzjDcSP8ABpGW2QP5OTqpzht9O3//2gAIAQIRAT8BJAFljnhKdAH/AA6SjuiQ4+njA3fPb//aAAgBAQAGPwL72KRXRrXcRZatJiQpIUK690kqx8njN7JPtcWEpVVCeFP5z//EADMQAQADAAICAgICAwEBAAACCwERACExQVFhcYGRobHB8NEQ4fEgMEBQYHCAkKCwwNDg/9oACAEBAAE/If8A8Uya0x4+7GcYJmSOeKkskBGeSv8AyHahl8+bKJKoDqfJYcd3VL/wCwWFj/kbNn/hwv8A/9oADAMBAAIRAxEAABBIGv7lpLAD/8QAMxEBAQEAAwABAgUFAQEAAQEJAQARITEQQVFhIHHwkYGhsdHB4fEwQFBgcICQoLDA0OD/2gAIAQMRAT8QJAqvAWRDrtzzx44vaE/iaYBJ+fH3/D//2gAIAQIRAT8QQIAd3+gQjIkXBEguyN+x5kHn/9oACAEBAAE/ELKUl6sLYbu2BXokEDJlB3VoBBCXIhmPmg2YO5QJFyaE7qcVGyOiJEclJDFLCj9a1w0PLEUFuWZMWFFJwxJihIvixLLzdp9R9WBQGnmwNP8Ahh/w/9k=" alt="user-photo" class="user__avatar me-5">
+    <div>
+      <p class="fw-bold mb-1">Andy Chen</p>
+      <span class="fs-sm text-secondary mb-0">andy0401@mail.com</span>
+    </div>
+  </div>
+</aside>  <!-- view Admin -->
+<div class="modal fade view-admin" id="viewAdmin" tabindex="-1" aria-labelledby="viewAdminLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body d-flex p-7">
+        <div class="me-6">
+          <img src="/-hex-layout-backstage-w5-/assets/emir-3d7a4b39.jpeg" alt="Emir-photo" class="Emir-photo rounded-1">
+        </div>
+        <div class="w-100 px-0">
+          <div class="d-flex justify-content-between">
+            <p class="mb-0">#1</p>
+            <button type="button" class="btn-close rounded-0" data-bs-dismiss="modal" aria-label="Close">
+            </button>
+          </div>
+          <p class="mb-0">Admin</p>
+          <h4 class="fw-bold mb-3">Emir Wicks</h4>
+          <p class="mb-5 fs-7 text-secondary fs-7">emir.wicks@mail.com</p>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header d-flex justify-content-between" id="flush-headingOne">
+                <p class="text-center p-3 bg-light fs-7">Verified</p>
+                <button class="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body p-0">
+                  <div class="d-flex justify-content-between p-0">
+                    <button type="button"
+                      class="btn btn-lg btn-outline-danger px-7 py-3 rounded-1 fs-6">Deactivate</button>
+                    <button type="button" class="btn btn-lg btn-success px-7 py-3 rounded-1 fs-6">Edit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- edit admin -->
+<div class="modal fade edit-admin " id="editAdmin" tabindex="-1" aria-labelledby="editAdminLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header p-7 border-bottom-0">
+        <h4 class="modal-title fw-bold" id="editAdminLabel">Edit Admin</h4>
+        <button type="button" class="btn-close rounded-0" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-7 py-0 mb-0">
+        <div class="edit-account-area border-bottom pb-6 mb-6">
+          <h5 class="mb-5 fw-bold">Account</h5>
+          <div class="edit-account-name mb-5">
+            <label for="edit-account-name" class="form-label fs-7">Name</label>
+            <input type="text" name="edit-account-name" id="edit-account-name"
+              class="form-control p-5 bg-light border-0 rounded-0" value="Emir Wicks">
+          </div>
+          <div class="edit-account-mail">
+            <label for="edit-account-mail" class="form-label fs-7">Email</label>
+            <input type="text" name="edit-account-mail" id="edit-account-mail"
+              class="form-control p-5 bg-light border-0 rounded-0" value="emir.wicks@mail.com">
+          </div>
+        </div>
+        <div class="edit-verification-area border-bottom pb-6 mb-6">
+          <h5 class="mb-5 fw-bold">Verification</h5>
+          <div class="d-flex justify-content-between mb-5">
+            <div class="d-flex me-2">
+              <span class="material-icons edit-verification-icon me-3 text-success mb-0">check_circle</span>
+              <p class="fw-bold mb-0">Verified</p>
+            </div>
+            <div>
+              <date class="fs-7 mb-0">2020/4/12</date>
+            </div>
+          </div>
+          <div>
+            <button class="btn btn-light border rounded-0 w-100 py-5 px-0" disabled>Send Verification Mail</button>
+          </div>
+        </div>
+        <div class="edit-access-level-area border-bottom pb-6 mb-6">
+          <h5 class="mb-5 fw-bold">Access Level</h5>
+          <div class="dropdown">
+            <button
+              class="btn dropdown-toggle w-100 d-flex justify-content-between align-items-center p-5 bg-white border-dark text-dark"
+              type="button" id="edit-access-dropdown-Button" data-bs-toggle="dropdown" aria-expanded="false">
+              Admin
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="edit-access-dropdown-Button">
+              <li><a class="dropdown-item" href="#">Access Level #1</a></li>
+              <li><a class="dropdown-item" href="#">Access Level #2</a></li>
+              <li><a class="dropdown-item" href="#">Access Level #3</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="edit-custom-access-area border-bottom pb-6 mb-6">
+          <h5 class="mb-5 fw-bold">Custom Access</h5>
+          <div class="form-check mb-5">
+            <input class="form-check-input me-4" type="checkbox" value="" id="coupon-check">
+            <label class="list-group-item">Lecture</label>
+          </div>
+          <div class="form-check mb-5">
+            <input class="form-check-input me-4" type="checkbox" value="" id="coupon-check">
+            <label class="list-group-item">Coupon</label>
+          </div>
+          <div class="form-check mb-5">
+            <input class="form-check-input me-4" type="checkbox" value="" id="message-check">
+            <label class="list-group-item">Message</label>
+          </div>
+          <div class="form-check mb-5">
+            <input class="form-check-input me-4" type="checkbox" value="" id="setting-check">
+            <label class="list-group-item">Setting</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input me-4" type="checkbox" value="" id="task-menu-check">
+            <label class="list-group-item">Task Menu</label>
+          </div>
+        </div>
+        <div class="edit-deactivate-account-area pb-6 mb-6">
+          <h5 class="mb-5 fw-bold">Deactivate Account</h5>
+          <div class="d-flex text-danger mb-5">
+            <span class="material-icons me-3 mb-0">warning</span>
+            <p class="mb-0">This cannot be undone!</p>
+          </div>
+          <button class="btn btn-outline-danger w-100 py-5 px-0 fw-bold rounded-1">Deactivate This Account</button>
+        </div>
+      </div>
+      <div class="modal-footer border-top-0 pe-6">
+        <button type="button" class="btn btn-outline-success py-3 px-7 rounded-1 me-5"
+          data-bs-dismiss="modal">Cancle</button>
+        <button type="button" class="btn btn-success py-3 px-7 rounded-1">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- new admin -->
+<div class="modal fade new-admin " id="newAdmin" tabindex="-1" aria-labelledby="newAdminLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0 p-7 border-bottom-0">
+        <h4 class="modal-title fw-bold" id="newAdminLabel">New Admin</h4>
+        <button type="button" class="btn-close rounded-0" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-7 py-0 mb-0">
+        <div class="new-account-area border-bottom pb-6 mb-6">
+          <h5 class="mb-5 fw-bold">Account</h5>
+          <div class="new-account-name mb-5">
+            <label for="new-account-name" class="form-label fs-7">Name</label>
+            <input type="text" name="new-account-name" id="new-account-name"
+              class="form-control p-5 border-dark rounded-1">
+          </div>
+          <div class="new-account-mail">
+            <label for="new-account-mail" class="form-label fs-7">Email</label>
+            <input type="text" name="new-account-mail" id="new-account-mail"
+              class="form-control p-5 border-dark rounded-1">
+          </div>
+        </div>
+        <div class="new-verification-area border-bottom pb-6 mb-6">
+          <h5 class="mb-5 fw-bold">Verification</h5>
+          <div class="d-flex me-2 mb-5">
+            <span class="material-icons me-3 mb-0 text-danger">warning</span>
+            <p class="mb-0">Unverified</p>
+          </div>
+          <button class="btn btn-outline-success rounded-0 w-100 py-5 px-0 border-">Send Verification Mail</button>
+        </div>
+        <div class="new-access-level-area border-bottom pb-6 mb-6">
+          <h5 class="mb-5 fw-bold">Access Level</h5>
+          <div class="dropdown">
+            <button
+              class="btn dropdown-toggle w-100 d-flex justify-content-between align-items-center p-5 bg-white border-dark text-secondary"
+              type="button" id="new-access-dropdown-Button" data-bs-toggle="dropdown" aria-expanded="false">
+              -Choose access level-
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="new-access-dropdown-Button">
+              <li><a class="dropdown-item" href="#">Access Level #1</a></li>
+              <li><a class="dropdown-item" href="#">Access Level #2</a></li>
+              <li><a class="dropdown-item" href="#">Access Level #3</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="edit-custom-access-area pb-6 mb-6">
+          <h5 class="mb-5 fw-bold">Custom Access</h5>
+          <div class="form-check mb-5">
+            <input class="form-check-input me-4" type="checkbox" value="" id="coupon-check">
+            <label class="list-group-item">Lecture</label>
+          </div>
+          <div class="form-check mb-5">
+            <input class="form-check-input me-4" type="checkbox" value="" id="coupon-check">
+            <label class="list-group-item">Coupon</label>
+          </div>
+          <div class="form-check mb-5">
+            <input class="form-check-input me-4" type="checkbox" value="" id="message-check">
+            <label class="list-group-item">Message</label>
+          </div>
+          <div class="form-check mb-5">
+            <input class="form-check-input me-4" type="checkbox" value="" id="setting-check">
+            <label class="list-group-item">Setting</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input me-4" type="checkbox" value="" id="task-menu-check">
+            <label class="list-group-item">Task Menu</label>
+          </div>
+        </div>
+      </div>
+        <div class="modal-footer border-top-0 pe-6">
+          <button type="button" class="btn btn-outline-success py-3 px-7 rounded-1 me-5"
+            data-bs-dismiss="modal">Cancle</button>
+          <button type="button" class="btn btn-success py-3 px-7 rounded-1">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>    <main class="container-lg p-7 d-flex flex-column">
+      <div class="header__area d-flex align-items-center justify-content-between py-7 mb-5">
+  <div class="header__left d-flex">
+      <h2 class="fw-bold me-8 mb-0">Admin</h2>
+    <button class="d-flex align-items-center" id="newAdmin" data-bs-toggle="modal" data-bs-target="#newAdmin">
+      <span class="d-flex fw-bold p-0">
+        <span class="material-icons text-success me-2">
+          add
+        </span>Add New Admin</span>
+      </button>
+  </div>
+    <div class="header__right align-items-center">
+      <span class="material-icons me-6 align-top text-dark link-success ">search</span>
+      <span class="material-icons align-top text-dark link-success ">
+        notifications_active
+      </span>
+    </div>
+  </div>
+        <div class="d-flex flex-column justify-content-between flex-grow-1">
+          <!-- 表單 -->
+          <table class="admin__list table table-hover align-middle">
+            <thead>
+              <tr>
+                <th scope="col" class=" align-middle">ID
+                  <span class="material-icons text-success  align-middle fs-6">
+                    arrow_downward
+                  </span>
+                </th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Verified</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="py-5 fw-normal">#1</th>
+                <td>Emir Wicks</td>
+                <td>emir.wicks@mail.com</td>
+                <td>Yes</td>
+                <td class="table-actions text-end">
+                  <span class="material-icons me-6 align-middle d-inline text-dark link-success" data-bs-toggle="modal" data-bs-target="#viewAdmin">visibility</span>
+                  <span class="material-icons align-middle d-inline text-dark link-success" data-bs-toggle="modal" data-bs-target="#editAdmin">edit</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="py-5 fw-normal">#2</th>
+                <td>Zaina Goldsmith</td>
+                <td>zaina.goldsmith@mail.com</td>
+                <td>Yes</td>
+                <td class="table-actions text-end">
+                  <span class="material-icons me-6 align-middle d-inline text-dark link-success">visibility</span>
+                  <span class="material-icons align-middle d-inline text-dark link-success">edit</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="py-5 fw-normal">#3</th>
+                <td>Mahima Lopez</td>
+                <td>mahima.lopez@mail.com</td>
+                <td>Yes</td>
+                <td class="table-actions text-end">
+                  <span class="material-icons me-6 align-middle d-inline text-dark link-success">visibility</span>
+                  <span class="material-icons align-middle d-inline text-dark link-success">edit</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="py-5 fw-normal">#4</th>
+                <td>Pharrell Murray</td>
+                <td>pharrell.murray@mail.com</td>
+                <td>Yes</td>
+                <td class="table-actions text-end">
+                  <span class="material-icons me-6 align-middle d-inline text-dark link-success">visibility</span>
+                  <span class="material-icons align-middle d-inline text-dark link-success">edit</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="py-5 fw-normal">#5</th>
+                <td>Annika Mcbride</td>
+                <td>annika.mcbride@mail.com</td>
+                <td>Yes</td>
+                <td class="table-actions text-end">
+                  <span class="material-icons me-6 align-middle d-inline text-dark link-success">visibility</span>
+                  <span class="material-icons align-middle d-inline text-dark link-success">edit</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="py-5 fw-normal">#6</th>
+                <td>Fatimah Clark</td>
+                <td>fatimah.clark@mail.com</td>
+                <td>Yes</td>
+                <td class="table-actions text-end">
+                  <span class="material-icons me-6 align-middle d-inline text-dark link-success">visibility</span>
+                  <span class="material-icons align-middle d-inline text-dark link-success">edit</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="py-5 fw-normal">#7</th>
+                <td>Klaudia Rhodes</td>
+                <td>klaudia.rhodes@mail.com</td>
+                <td>Yes</td>
+                <td class="table-actions text-end">
+                  <span class="material-icons me-6 align-middle d-inline text-dark link-success">visibility</span>
+                  <span class="material-icons align-middle d-inline text-dark link-success">edit</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="py-5 fw-normal">#8</th>
+                <td>Tillie Lucero</td>
+                <td>tillie.lucero@mail.com</td>
+                <td>Yes</td>
+                <td class="table-actions text-end">
+                  <span class="material-icons me-6 align-middle d-inline text-dark link-success">visibility</span>
+                  <span class="material-icons align-middle d-inline text-dark link-success">edit</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="py-5 fw-normal">#9</th>
+                <td>Sabrina Stephenson</td>
+                <td>sabrina.stephenson@mail.com</td>
+                <td>Yes</td>
+                <td class="table-actions text-end">
+                  <span class="material-icons me-6 align-middle d-inline text-dark link-success">visibility</span>
+                  <span class="material-icons align-middle d-inline text-dark link-success">edit</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="py-5 fw-normal">#10</th>
+                <td>Annie Smith</td>
+                <td>annie.smith@mail.com</td>
+                <td>Yes</td>
+                <td class="table-actions text-end">
+                  <span class="material-icons me-6 align-middle d-inline text-dark link-success">visibility</span>
+                  <span class="material-icons align-middle d-inline text-dark link-success">edit</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- 頁碼 -->
+          <nav aria-label="Page navigation example" class="ms-auto">
+            <ul class="pagination mb-0 justify-content-center ">
+              <li class="page-item">
+                <a class="page-link text-success " href="#" aria-label="Previous">
+                  <span class="material-icons align-middle fs-6 fw-bold">
+                    chevron_left
+                    </span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link text-success" href="#" aria-label="Next">
+                  <span class="material-icons align-middle fs-6 fw-bold">
+                    chevron_right
+                    </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"></script>
+    
+</body>
+
+</html>
