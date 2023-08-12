@@ -24,3 +24,10 @@
   }
 }
 
+//改變點擊(focus)輸入欄位時出現的光暈
+input[type="text"]:focus{
+  border-color: $success;
+  box-shadow: 1px 1px 1px rgba(25, 135, 84, 0.05) inset,  0 0 8px rgba(25, 135, 84,  0.7);
+  outline: 0 none;
+}
+
